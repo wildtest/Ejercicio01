@@ -855,3 +855,19 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+
+# Ignorar solución de Visual Studio
+Ejercicio01.sln
+
+# Ignorar archivo de configuración de la aplicación
+Ejercicio01/App.config
+
+# Ignorar archivo del proyecto de Visual Studio
+Ejercicio01/Ejercicio01.csproj
+
+# Ignorar el archivo de código de la clase MenuPrincipal
+Ejercicio01/MenuPrincipal.cs
+
+# Ignorar la carpeta Properties que generalmente contiene configuraciones y metadatos
+Ejercicio01/Properties/
