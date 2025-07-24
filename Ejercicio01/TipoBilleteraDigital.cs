@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Ejercicio01
 {
+	/// <summary>
+	/// Clase TipoBilleteraDigital que representa un tipo de billetera digital.
+	/// </summary>
 	public class TipoBilleteraDigital
 	{
 		public string Nombre { get; set; }
@@ -16,6 +19,10 @@ namespace Ejercicio01
 			Proveedor = proveedor;
 		}
 
+		/// <summary>
+		/// Método que muestra el tipo de billetera digital.
+		/// </summary>
+		/// <returns></returns>
 		public string MostrarTipo()
 		{
 			return $"{Nombre} - {Proveedor}";

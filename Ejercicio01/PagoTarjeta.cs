@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace Ejercicio01
 {
+
+	/// <summary>
+	/// Clase PagoTarjeta que hereda de Pago e implementa IValidacionPago.
+	/// </summary>
 	public class PagoTarjeta : Pago, IValidacionPago
 	{
 		public string NumeroTarjeta { get; set; }
@@ -22,6 +26,11 @@ namespace Ejercicio01
 			Tipo = tipo;
 		}
 
+		/// <summary>
+		/// Método para procesar un pago con tarjeta.
+		/// </summary>
+		/// <param name="monto"></param>
+		/// <returns></returns>
 		public override bool ProcesarPago(double monto)
 		{
 			if (!Validar())
@@ -33,6 +42,11 @@ namespace Ejercicio01
 			return true;
 		}
 
+
+		/// <summary>
+		/// Método para validar los datos del pago con tarjeta.
+		/// </summary>
+		/// <returns></returns>
 		public bool Validar()
 		{
 			if (Monto <= 0)

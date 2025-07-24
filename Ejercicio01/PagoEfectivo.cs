@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Ejercicio01
 {
+	/// <summary>
+	/// Clase PagoEfectivo que hereda de la clase Pago e implementa la interfaz IValidacionPago.
+	/// </summary>
 	public class PagoEfectivo: Pago, IValidacionPago
 	{
 		public string NombreCliente { get; set; }
@@ -21,6 +24,12 @@ namespace Ejercicio01
 			Vuelto = CalcularVuelto();
 		}
 
+
+		/// <summary>
+		/// Método para procesar un pago en efectivo.
+		/// </summary>
+		/// <param name="monto"></param>
+		/// <returns></returns>
 		public override bool ProcesarPago(double monto)
 		{
 			if (!Validar())
@@ -32,6 +41,11 @@ namespace Ejercicio01
 			return true;
 		}
 
+
+		/// <summary>
+		/// Método para validar un pago en efectivo.
+		/// </summary>
+		/// <returns></returns>
 		public bool Validar()
 		{
 			if (Monto <= 0)
@@ -48,6 +62,11 @@ namespace Ejercicio01
 			return true;
 		}
 
+
+		/// <summary>
+		/// Método para calcular el vuelto a entregar al cliente.
+		/// </summary>
+		/// <returns></returns>
 		private double CalcularVuelto()
 		{
 			if (MontoPagado >= Monto)

@@ -8,6 +8,12 @@ namespace Ejercicio01
 {
 	public class Pagos
 	{
+
+		/// <summary>
+		/// Método que realiza un pago utilizando el método de pago especificado.
+		/// </summary>
+		/// <param name="metodoPago"></param>
+		/// <param name="total"></param>
 		public static void RealizarPago(MetodoPago metodoPago, decimal total)
 		{
 			switch (metodoPago)

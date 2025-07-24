@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Ejercicio01
 {
+	/// <summary>
+	/// Clase ProductoPapeleria que hereda de Producto.
+	/// </summary>
 	public class ProductoPapeleria: Producto
 	{
 		public string Tipo { get; set; }
@@ -20,6 +23,9 @@ namespace Ejercicio01
 			Tamanio = tamanio;
 		}
 
+		/// <summary>
+		/// Método para mostrar información general del producto de papelería.
+		/// </summary>
 		public override void MostrarDetalles()
 		{
 			Console.WriteLine($"Tipo: {Tipo}, Color: {Color}, Tamanio: {Tamanio}");

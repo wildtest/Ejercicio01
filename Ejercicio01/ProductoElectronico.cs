@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Ejercicio01
 {
+	/// <summary>
+	/// Clase que representa un producto electrónico, hereda de Producto.
+	/// </summary>
 	public class ProductoElectronico: Producto
 	{
 		public string Tipo { get; set; }
@@ -18,6 +21,9 @@ namespace Ejercicio01
 			FuenteEnergia = fuenteEnergia;
 		}
 
+		/// <summary>
+		/// Método para mostrar información general del producto electrónico.
+		/// </summary>
 		public override void MostrarDetalles()
 		{
 			Console.WriteLine($"Tipo: {Tipo}, Fuente de Energía: {FuenteEnergia}");

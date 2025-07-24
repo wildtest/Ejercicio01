@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Ejercicio01
 {
+	/// <summary>
+	/// Enumeración que representa los diferentes métodos de pago disponibles.
+	/// </summary>
 	public enum MetodoPago
 	{
 		Yape,

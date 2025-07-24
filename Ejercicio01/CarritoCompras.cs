@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Ejercicio01
 {
+	/// <summary>
+	/// Clase CarritoCompras que implementa la interfaz ICarritoCompras.
+	/// </summary>
 	public class CarritoCompras: ICarritoCompras
 	{
 		private List<Producto> _productos;
@@ -15,12 +18,20 @@ namespace Ejercicio01
 			_productos = new List<Producto>();
 		}
 
+		/// <summary>
+		/// Método para agregar un producto al carrito.
+		/// </summary>
+		/// <param name="producto"></param>
 		public void AgregarProducto(Producto producto)
 		{
 			_productos.Add(producto);
 			Console.WriteLine($"Producto {producto.Nombre} agregado al carrito.");
 		}
 
+		/// <summary>
+		/// Método para eliminar un producto del carrito por su ID.
+		/// </summary>
+		/// <param name="id"></param>
 		public void EliminarProducto(int id)
 		{
 			var producto = _productos.Find(p => p.Id == id);
@@ -35,6 +46,9 @@ namespace Ejercicio01
 			}
 		}
 
+		/// <summary>
+		/// Método para mostrar los productos en el carrito.
+		/// </summary>
 		public void MostrarCarrito()
 		{
 			Console.WriteLine("\nProductos en el Carrito:");
@@ -44,6 +58,11 @@ namespace Ejercicio01
 			}
 		}
 
+
+		/// <summary>
+		/// Método para calcular el total de la compra.
+		/// </summary>
+		/// <returns></returns>
 		public decimal TotalCompra()
 		{
 			decimal total = 0;

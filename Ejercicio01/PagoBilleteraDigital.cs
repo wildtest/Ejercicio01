@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace Ejercicio01
 {
+
+	/// <summary>
+	/// Clase PagoBilleteraDigital que hereda de la clase Pago e implementa la interfaz IValidacionPago.
+	/// </summary>
 	public class PagoBilleteraDigital : Pago, IValidacionPago
 	{
 		public string CorreoBilletera { get; set; }
@@ -21,6 +25,12 @@ namespace Ejercicio01
 			TipoBilletera = tipoBilletera;
 		}
 
+
+		/// <summary>
+		/// Método para procesar un pago con billetera digital.
+		/// </summary>
+		/// <param name="monto"></param>
+		/// <returns></returns>
 		public override bool ProcesarPago(double monto)
 		{
 			if (!Validar())
@@ -32,6 +42,11 @@ namespace Ejercicio01
 			return true;
 		}
 
+
+		/// <summary>
+		/// Método para validar los datos del pago con billetera digital.
+		/// </summary>
+		/// <returns></returns>
 		public bool Validar()
 		{
 			if (Monto <= 0)

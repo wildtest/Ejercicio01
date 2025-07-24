@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Ejercicio01
 {
+	/// <summary>
+	/// Clase ProductoMochila que hereda de Producto.
+	/// </summary>
 	public class ProductoMochila: Producto
 	{
 		public string Material { get; set; }
@@ -20,6 +23,9 @@ namespace Ejercicio01
 			Dimensiones = dimensiones;
 		}
 
+		/// <summary>
+		/// Método para mostrar información general del producto mochila.
+		/// </summary>
 		public override void MostrarDetalles()
 		{
 			Console.WriteLine($"Material: {Material}, Compartimentos: {Compartimentos}, Dimensiones: {Dimensiones}");

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Ejercicio01
 {
+	/// <summary>
+	/// Clase ProductoLibro que hereda de Producto.
+	/// </summary>
 	public class ProductoLibro: Producto
 	{
 		public string Autor { get; set; }
@@ -22,6 +25,9 @@ namespace Ejercicio01
 			NumeroPaginas = numeroPaginas;
 		}
 
+		/// <summary>
+		/// Método para mostrar información general del libro.
+		/// </summary>
 		public override void MostrarDetalles()
 		{
 			Console.WriteLine($"Autor: {Autor}, Editorial: {Editorial}, ISBN: {Editorial}, Páginas: {NumeroPaginas}");

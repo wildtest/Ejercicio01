@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Ejercicio01
 {
+	/// <summary>
+	/// Clase base para representar un producto.
+	/// </summary>
 	public abstract class Producto
 	{
 		public int Id { get; set; }
@@ -21,11 +24,17 @@ namespace Ejercicio01
 			Stock = stock;
 		}
 
+		/// <summary>
+		/// Método para mostrar información general del producto.
+		/// </summary>
 		public virtual void MostrarInformacion()
 		{
 			Console.WriteLine($"ID: {Id}, Nombre: {Nombre}, Precio: {Precio:C}, Stock: {Stock}");
 		}
 
+		/// <summary>
+		/// Método abstracta para mostrar detalles específicos del producto.
+		/// </summary>
 		public abstract void MostrarDetalles();
 	}
 }
